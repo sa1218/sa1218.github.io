@@ -1,0 +1,817 @@
+WEBVTT
+
+1
+00:00:00.450 --> 00:00:02.042
+Welcome to Hyperion.
+
+2
+00:00:02.260 --> 00:00:08.617
+We are following one studio through assets, commerce, payments, escrow,
+governance, and operations.
+
+3
+00:00:08.834 --> 00:00:14.124
+This is an isolated local demonstration with fresh test wallets and test
+assets.
+
+4
+00:00:14.342 --> 00:00:17.617
+The interface and the chain results you see are real.
+
+5
+00:00:18.617 --> 00:00:21.914
+First, click Connect wallet and choose the studio owner.
+
+6
+00:00:22.375 --> 00:00:25.949
+This message signs us in; it does not authorize a payment.
+
+7
+00:00:26.410 --> 00:00:31.050
+We then create Aurora Studio, giving the team one place to manage its work.
+
+8
+00:00:32.050 --> 00:00:38.098
+In Settings, we choose the studio display name, enable its storefront, and set
+the receiving wallet.
+
+9
+00:00:40.975 --> 00:00:42.867
+All eight modules are enabled.
+
+10
+00:00:45.745 --> 00:00:52.350
+We add a customer member and a team approver; workspace access and onchain
+signing authority remain separate.
+
+11
+00:00:53.350 --> 00:00:55.715
+Open Assets and choose Create an asset.
+
+12
+00:01:03.248 --> 00:01:09.561
+Aurora credits use the standard token format, six decimal places, and an
+explicit issuance cap.
+
+13
+00:01:17.093 --> 00:01:22.383
+Review transaction opens the actual plan; the owner separately approves its
+signature.
+
+14
+00:01:23.383 --> 00:01:27.075
+Next, Issue tokens sends one thousand credits to the owner.
+
+15
+00:01:37.139 --> 00:01:41.193
+Amounts are entered in base units, so six decimal places matter.
+
+16
+00:01:51.257 --> 00:01:56.450
+We then read the wallet balance directly from the configured chain to verify
+the result.
+
+17
+00:01:57.450 --> 00:02:00.362
+The distribution workflow starts with a campaign.
+
+18
+00:02:12.250 --> 00:02:15.332
+We choose an airdrop and a two hundred credit budget.
+
+19
+00:02:27.220 --> 00:02:33.450
+Creating this campaign defines its rules; it does not fund the campaign or
+give anyone tokens yet.
+
+20
+00:02:34.450 --> 00:02:39.697
+We fund the campaign with its full budget, then allocate that amount to the
+customer member.
+
+21
+00:02:53.983 --> 00:02:57.192
+Funding and allocation are separate signed actions.
+
+22
+00:03:11.477 --> 00:03:15.850
+This makes the source of the tokens and the beneficiary entitlement visible.
+
+23
+00:03:16.850 --> 00:03:18.977
+Now we switch to the customer member.
+
+24
+00:03:32.370 --> 00:03:36.298
+Claim allocation transfers the entitled tokens to this wallet.
+
+25
+00:03:49.691 --> 00:03:56.250
+The balance query confirms two hundred credits, which we will use in the
+following purchase and payment workflows.
+
+26
+00:03:57.250 --> 00:04:01.590
+Back as the owner, we create a credential collection for studio memberships.
+
+27
+00:04:11.387 --> 00:04:15.097
+It has zero token decimals and an explicit item cap.
+
+28
+00:04:24.895 --> 00:04:31.017
+These credentials will be issued after payment, so buying and activating a
+membership stay distinct.
+
+29
+00:04:32.017 --> 00:04:34.384
+Open Commerce, then Private files.
+
+30
+00:04:34.725 --> 00:04:37.934
+We upload the design kit and a separate members guide.
+
+31
+00:04:38.275 --> 00:04:42.722
+The application encrypts these actual files and records their digests.
+
+32
+00:04:43.063 --> 00:04:48.717
+A product will refer to a specific uploaded file, rather than an empty
+download placeholder.
+
+33
+00:04:49.717 --> 00:04:51.660
+New product creates the offering.
+
+34
+00:04:52.425 --> 00:04:59.932
+We choose the settlement asset, set a ten credit price, select the design kit,
+and keep the full revenue share with the studio.
+
+35
+00:05:00.697 --> 00:05:03.950
+Saving produces a draft; sales are not open yet.
+
+36
+00:05:04.950 --> 00:05:08.334
+Set up and publish first prepares the onchain payment terms.
+
+37
+00:05:18.554 --> 00:05:25.230
+After that transaction finalizes, we link the exact file to its content
+address and verify the product.
+
+38
+00:05:35.450 --> 00:05:39.150
+Only then does the offering become available to customers.
+
+39
+00:05:40.150 --> 00:05:44.117
+We also create a thirty day membership with its own private guide.
+
+40
+00:05:59.461 --> 00:06:01.457
+Its price is fifteen credits.
+
+41
+00:06:16.801 --> 00:06:24.950
+The membership uses the credential collection we created earlier, so the paid
+order and its access credential can be verified together.
+
+42
+00:06:25.950 --> 00:06:29.139
+Switch to the customer and open the product collection.
+
+43
+00:06:37.969 --> 00:06:41.662
+Buy and review prepares the purchase for this exact product.
+
+44
+00:06:50.492 --> 00:06:56.550
+After signing, Check and sync status verifies the receipt and moves the order
+to its payment stage.
+
+45
+00:06:57.550 --> 00:07:00.665
+Review payment is the separate money-moving action.
+
+46
+00:07:05.314 --> 00:07:09.293
+We approve it in the test wallet and verify the finalized receipt.
+
+47
+00:07:13.942 --> 00:07:20.183
+The order becomes paid, and Download content now delivers the exact design kit
+that was uploaded.
+
+48
+00:07:21.183 --> 00:07:24.673
+The membership follows the same purchase and payment sequence.
+
+49
+00:07:34.268 --> 00:07:37.250
+Watch its result: paid, awaiting fulfillment.
+
+50
+00:07:46.846 --> 00:07:50.129
+Payment alone does not activate membership access.
+
+51
+00:07:59.725 --> 00:08:02.917
+The publisher still needs to issue the promised credential.
+
+52
+00:08:03.917 --> 00:08:08.119
+As the owner, open Orders and memberships and choose Issue membership.
+
+53
+00:08:16.150 --> 00:08:18.148
+This signs the credential issuance.
+
+54
+00:08:26.179 --> 00:08:33.250
+We then check and sync that specific transaction, changing the order to
+fulfilled with its recorded access dates.
+
+55
+00:08:34.250 --> 00:08:37.119
+The customer can now download the members guide.
+
+56
+00:08:37.635 --> 00:08:43.150
+This is a different file from the content purchase, and its access is checked
+against the membership.
+
+57
+00:08:43.666 --> 00:08:46.750
+The displayed end date makes the duration visible.
+
+58
+00:08:47.750 --> 00:08:52.549
+Returning to the owner, open Orders and memberships and choose Review refund.
+
+59
+00:08:57.343 --> 00:09:02.324
+The publisher funds this refund, returning the original gross debit to the
+customer.
+
+60
+00:09:07.117 --> 00:09:12.983
+We approve the transaction, wait for its receipt, and use Check and sync
+status to update the order.
+
+61
+00:09:17.776 --> 00:09:20.913
+Its next state is refunded pending revocation.
+
+62
+00:09:25.706 --> 00:09:30.238
+Now choose Review revocation and approve the separate credential action.
+
+63
+00:09:35.031 --> 00:09:40.950
+A final status check completes the membership refund and removes access to its
+private guide.
+
+64
+00:09:41.950 --> 00:09:47.477
+In Payments, New invoice records a specific payer, receiving wallet, asset,
+and amount.
+
+65
+00:09:47.990 --> 00:09:51.663
+This invoice requests twenty-five credits for a studio review.
+
+66
+00:09:52.176 --> 00:09:55.183
+Creating the business record does not mark it paid.
+
+67
+00:09:56.183 --> 00:09:59.139
+Open the invoice and prepare its payment request.
+
+68
+00:10:07.577 --> 00:10:11.447
+Once it is finalized, bind that exact request to the invoice.
+
+69
+00:10:19.885 --> 00:10:24.717
+The payer link and the recorded reference now point to a single set of payment
+terms.
+
+70
+00:10:25.717 --> 00:10:29.398
+The named payer opens the invoice and chooses Review and pay.
+
+71
+00:10:39.863 --> 00:10:43.393
+After wallet approval, we verify the linked payment receipt.
+
+72
+00:10:53.858 --> 00:11:00.950
+The invoice changes to paid only after the amount, parties, asset, and
+finalized chain result all match.
+
+73
+00:11:01.950 --> 00:11:06.953
+The bridge page explains the source burn, attestation, and destination mint.
+
+74
+00:11:07.454 --> 00:11:11.485
+We can inspect both Solana-to-Base and Base-to-Solana directions.
+
+75
+00:11:11.986 --> 00:11:21.083
+This local instance has no connected Circle environment, so transfer actions
+remain unavailable rather than showing a simulated success.
+
+76
+00:11:22.083 --> 00:11:26.425
+For escrow, the customer becomes the buyer and the studio is the merchant.
+
+77
+00:11:54.483 --> 00:12:03.783
+Create a draft order sets one milestone, funding by milestone, the original
+settlement asset, and explicit funding and refund response windows.
+
+78
+00:12:04.783 --> 00:12:09.881
+We configure one asset in this milestone and set the agreed principal to one
+credit.
+
+79
+00:12:30.285 --> 00:12:31.747
+These are draft terms.
+
+80
+00:12:52.151 --> 00:12:59.083
+The current terms version is included with each operation so an outdated
+agreement cannot be changed accidentally.
+
+81
+00:13:00.083 --> 00:13:01.826
+Start with Set arbitrators.
+
+82
+00:13:06.707 --> 00:13:13.287
+We enter separate primary and backup addresses, with one-hour response
+windows, and approve these terms first.
+
+83
+00:13:18.167 --> 00:13:22.883
+Next, choose Set delivery terms for the same order and its current terms
+version.
+
+84
+00:13:27.763 --> 00:13:31.678
+There is one milestone, with a delivery deadline three hours ahead.
+
+85
+00:13:36.559 --> 00:13:41.614
+Its review window and revision window are each one hour, and the revision
+limit is two.
+
+86
+00:13:46.495 --> 00:13:49.216
+Review the complete transaction before signing.
+
+87
+00:13:54.097 --> 00:13:59.717
+These settings record the responsibilities and deadlines that both parties
+will later accept.
+
+88
+00:14:00.717 --> 00:14:02.745
+Sealing follows a checked sequence.
+
+89
+00:14:11.552 --> 00:14:15.190
+First, choose Begin sealing terms for the current order version.
+
+90
+00:14:23.997 --> 00:14:32.072
+After that result is verified, choose Verify milestone for sealing and check
+milestone zero, the only milestone in this order.
+
+91
+00:14:40.878 --> 00:14:44.941
+Next, open Read chain state and request the terms digest.
+
+92
+00:14:53.747 --> 00:14:56.608
+This hash identifies the configured agreement.
+
+93
+00:15:05.414 --> 00:15:10.545
+Return to Seal reviewed terms and enter that exact digest with the current
+version.
+
+94
+00:15:19.351 --> 00:15:23.350
+The sealed order is now ready for the merchant to review and accept.
+
+95
+00:15:24.350 --> 00:15:27.010
+Switch to the studio owner acting as merchant.
+
+96
+00:15:36.488 --> 00:15:39.976
+Accept sealed order includes the same reviewed terms hash.
+
+97
+00:15:49.454 --> 00:15:55.650
+The two parties have now accepted the same agreement; funding and delivery
+still happen in later steps.
+
+98
+00:15:56.650 --> 00:16:01.161
+The buyer prepares funding and creates the milestone vault for Aurora credits.
+
+99
+00:16:23.032 --> 00:16:26.860
+These setup actions establish where the agreed asset will be held.
+
+100
+00:16:48.731 --> 00:16:52.783
+The order is not treated as funded just because the vault exists.
+
+101
+00:16:53.783 --> 00:16:57.015
+We will fund the one-credit milestone in two transfers.
+
+102
+00:17:06.404 --> 00:17:11.919
+First, enter four hundred thousand base units, equal to forty percent of one
+credit.
+
+103
+00:17:21.307 --> 00:17:26.586
+The minimum receipt and maximum debit are explicit, and we review and sign the
+transfer.
+
+104
+00:17:35.974 --> 00:17:38.771
+The milestone still needs its remaining principal.
+
+105
+00:17:48.160 --> 00:17:52.426
+Next, repeat the funding action with six hundred thousand base units.
+
+106
+00:18:01.814 --> 00:18:05.995
+After both transfers finalize, choose Confirm milestone funding.
+
+107
+00:18:15.383 --> 00:18:21.750
+This final check verifies the full agreed balance in the vault before the
+merchant can deliver the work.
+
+108
+00:18:22.750 --> 00:18:27.751
+The merchant submits the first delivery with its evidence address and file
+digest.
+
+109
+00:18:40.003 --> 00:18:42.235
+The hash commits to the delivered version.
+
+110
+00:18:54.487 --> 00:18:57.817
+The buyer can now review it under the agreed review window.
+
+111
+00:18:58.817 --> 00:19:02.541
+The buyer requests a revision against delivery version zero.
+
+112
+00:19:13.269 --> 00:19:17.034
+The request records the digest of the requested changes.
+
+113
+00:19:27.762 --> 00:19:33.383
+This stays inside the revision limit and response window already accepted by
+both parties.
+
+114
+00:19:34.383 --> 00:19:38.595
+Back as the merchant, we submit the revised file and its new digest.
+
+115
+00:19:50.853 --> 00:19:53.601
+The expected previous revision is explicit.
+
+116
+00:20:05.859 --> 00:20:10.883
+This creates the next delivery version instead of silently replacing the first
+handoff.
+
+117
+00:20:11.883 --> 00:20:13.902
+The buyer approves revision one.
+
+118
+00:20:24.720 --> 00:20:27.432
+Approval records acceptance of this delivery.
+
+119
+00:20:38.250 --> 00:20:44.083
+It authorizes settlement under the agreed terms, while the actual payment is
+still a separate action.
+
+120
+00:20:45.083 --> 00:20:47.601
+The merchant now settles the approved asset.
+
+121
+00:21:02.274 --> 00:21:06.870
+This executes the actual transfer, including the configured protocol fee.
+
+122
+00:21:21.543 --> 00:21:26.683
+Reading the order afterward exposes the released amount, fee, and milestone
+state.
+
+123
+00:21:27.683 --> 00:21:29.712
+Closure is another checked sequence.
+
+124
+00:21:38.419 --> 00:21:44.339
+The buyer first chooses Prepare order closure, then Verify milestone closure
+for milestone zero.
+
+125
+00:21:53.046 --> 00:21:58.048
+Once those checks finish, Close completed order records the completed
+lifecycle.
+
+126
+00:22:06.755 --> 00:22:11.692
+Next, open the empty-vault workflow and choose Verify and retain archive.
+
+127
+00:22:20.399 --> 00:22:27.630
+Hyperion reads and retains the complete closed-order evidence, displaying its
+hash when verification succeeds.
+
+128
+00:22:36.338 --> 00:22:39.686
+This recording ends the order with its archive preserved.
+
+129
+00:22:48.393 --> 00:22:53.683
+Reclaiming rent or cleaning up its remaining chain accounts is a separate
+later action.
+
+130
+00:22:54.683 --> 00:22:57.897
+Treasury uses a separate onchain approval policy.
+
+131
+00:23:10.263 --> 00:23:17.793
+We create a Squads team with the owner and approver, require both votes, and
+set no execution delay for this demonstration.
+
+132
+00:23:30.159 --> 00:23:34.617
+The browser generates the additional creation signer for this transaction.
+
+133
+00:23:35.617 --> 00:23:38.669
+First, issue one hundred credits to the treasury vault.
+
+134
+00:23:43.604 --> 00:23:46.964
+The recipient is the vault address created for this team.
+
+135
+00:23:51.898 --> 00:23:57.454
+After that issuance is verified, return to Treasury and choose Propose a
+treasury payment.
+
+136
+00:24:02.389 --> 00:24:10.452
+We enter the organization, the studio owner as recipient, the same asset
+configuration, and the full one hundred credit amount.
+
+137
+00:24:15.386 --> 00:24:17.331
+Review and sign the proposal.
+
+138
+00:24:22.265 --> 00:24:28.217
+Its payment payload is now fixed, while the funds remain governed by the two-
+person approval policy.
+
+139
+00:24:29.217 --> 00:24:33.919
+The owner votes to approve the proposal using its recorded payload hash.
+
+140
+00:24:39.054 --> 00:24:42.021
+One vote is still below the two-person threshold.
+
+141
+00:24:47.155 --> 00:24:51.817
+The transaction history records this decision separately from execution.
+
+142
+00:24:52.817 --> 00:24:59.715
+The team approver signs in, reviews the same proposal index and payload hash,
+and adds the second approval.
+
+143
+00:25:19.334 --> 00:25:25.317
+This is the second required onchain vote, not an administrator changing a
+database flag.
+
+144
+00:25:26.317 --> 00:25:29.977
+With both approvals present, the owner executes the proposal.
+
+145
+00:25:44.775 --> 00:25:47.389
+The approved treasury payment can now move.
+
+146
+00:26:02.187 --> 00:26:08.917
+The Realms workflow is also available here for community governance, with its
+own proposal and voting rules.
+
+147
+00:26:09.917 --> 00:26:15.271
+For the liquidity chapter, we create a second local test asset and issue its
+pool budget.
+
+148
+00:26:33.781 --> 00:26:36.927
+These quote tokens are test assets, not dollars.
+
+149
+00:26:55.437 --> 00:26:59.383
+Together with Aurora credits, they form the pair for the following pool.
+
+150
+00:27:00.383 --> 00:27:04.213
+Open Trading and liquidity, then choose the DAMM pool workflow.
+
+151
+00:27:11.636 --> 00:27:16.318
+We select a supported configuration and supply eighty units of each asset.
+
+152
+00:27:23.741 --> 00:27:28.583
+The initial token ratio and both debits are explicit before wallet approval.
+
+153
+00:27:29.583 --> 00:27:32.849
+First, choose Create a liquidity position for the new pool.
+
+154
+00:27:35.436 --> 00:27:39.617
+Review and sign to establish the separate position and its ownership.
+
+155
+00:27:42.203 --> 00:27:45.988
+Then choose Add DAMM liquidity and enter that position address.
+
+156
+00:27:48.575 --> 00:27:52.130
+We set a maximum deposit of ten units for each token.
+
+157
+00:27:54.716 --> 00:27:59.707
+The pool's current ratio determines the actual amounts used within those
+limits.
+
+158
+00:28:02.294 --> 00:28:10.817
+After approval and confirmation, the new position has its own recorded
+liquidity, separate from the position created with the original pool.
+
+159
+00:28:11.817 --> 00:28:15.199
+Read chain state shows the positions owned by this wallet.
+
+160
+00:28:19.794 --> 00:28:23.420
+We select the separate position and review Claim DAMM fees.
+
+161
+00:28:28.014 --> 00:28:32.536
+This is a fresh pool, so the demonstration assumes no earned trading fees.
+
+162
+00:28:37.131 --> 00:28:42.377
+Next, choose Remove DAMM liquidity for the liquidity amount added in the
+previous step.
+
+163
+00:28:46.972 --> 00:28:50.790
+Both minimum outputs are entered explicitly in base units.
+
+164
+00:28:55.384 --> 00:28:58.595
+Review the returned assets and approve the transaction.
+
+165
+00:29:03.189 --> 00:29:11.850
+Finally, read the positions again to inspect the result; the pool's original
+position remains separate from the position we just exited.
+
+166
+00:29:12.850 --> 00:29:19.729
+The same interface exposes bonding-curve launches and graduation, as well as
+DLMM positions.
+
+167
+00:29:20.209 --> 00:29:23.891
+Jupiter swaps require their configured external provider.
+
+168
+00:29:24.371 --> 00:29:31.550
+We show these separate workflows and their availability without presenting an
+unexecuted swap as a completed trade.
+
+169
+00:29:32.550 --> 00:29:38.553
+Staking and lending exposes Jito deposits and the separate exit, cooldown, and
+claim steps.
+
+170
+00:29:39.062 --> 00:29:43.061
+Kamino exposes supply, withdrawal, borrowing, and repayment.
+
+171
+00:29:43.570 --> 00:29:51.750
+These providers are not connected in this local instance, so this chapter
+demonstrates their forms and limits, not funded positions.
+
+172
+00:29:52.750 --> 00:29:55.857
+Activity brings the recorded operations together.
+
+173
+00:29:56.363 --> 00:30:04.704
+Search by a business reference and filter to finalized results, then open a
+transaction to inspect its signer, state, and signature.
+
+174
+00:30:05.210 --> 00:30:08.250
+This connects a business action to its chain evidence.
+
+175
+00:30:09.250 --> 00:30:12.321
+Operations includes background receipt checks.
+
+176
+00:30:12.807 --> 00:30:17.756
+We select an existing transaction and schedule a check of that original
+result.
+
+177
+00:30:18.241 --> 00:30:23.617
+This task reconciles the saved signature; it does not sign or send another
+payment.
+
+178
+00:30:24.617 --> 00:30:30.013
+Connections distinguishes configured adapters from services that are still
+unavailable.
+
+179
+00:30:30.316 --> 00:30:34.508
+Project Two B remains a reserved integration, as requested.
+
+180
+00:30:34.811 --> 00:30:45.317
+The callback page accepts a real HTTPS receiver; this recording does not
+register an invented endpoint or send events to an unrelated service.
+
+181
+00:30:46.317 --> 00:30:53.389
+The ledger records finalized account movements in exact base units, including
+applicable network fees and rent.
+
+182
+00:30:53.782 --> 00:30:57.081
+It does not combine different assets into a profit figure.
+
+183
+00:30:57.474 --> 00:31:02.050
+Export activity downloads the operations record for further review.
+
+184
+00:31:03.050 --> 00:31:06.847
+We return to the overview and open the workspace notifications.
+
+185
+00:31:07.158 --> 00:31:14.125
+The studio now has actual asset, commerce, payment, escrow, treasury, and
+liquidity activity to inspect.
+
+186
+00:31:14.436 --> 00:31:22.583
+The unconnected bridge, staking, lending, and Project Two B paths remain
+visibly separate from those completed local workflows.
